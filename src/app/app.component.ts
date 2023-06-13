@@ -3,8 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'GL-N-23';
+  title = 'title';
+
+  traitementDuApp(msg) {
+    this.title = msg;
+  }
 }

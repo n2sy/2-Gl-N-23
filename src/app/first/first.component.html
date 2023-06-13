@@ -8,4 +8,6 @@
 
 <input [(ngModel)]="section" type="text">
 
-<app-child [cl]="'green'"></app-child>
+<app-child (msgToFirst)="traitementDuFirst($event)" [cl]="'green'"></app-child>
+
+<div> {{ feres }} </div>

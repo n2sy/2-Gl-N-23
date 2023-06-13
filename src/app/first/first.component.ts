@@ -10,9 +10,15 @@ export class FirstComponent {
   university = 'tek-up';
   hd = false;
   color = 'pink';
+  feres = '';
 
   traitement() {
     // alert("J'ai été cliqué");
     this.university = 'Sésame';
+  }
+
+  traitementDuFirst(msg) {
+    alert(msg);
+    this.feres = msg;
   }
 }
