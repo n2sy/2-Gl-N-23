@@ -3,3 +3,9 @@
 <div [hidden]="hd" [style.backgroundColor]="color">
     Nidhal
 </div>
+
+<button (click)="traitement()">Click me</button>
+
+<input [(ngModel)]="section" type="text">
+
+<app-child [cl]="'green'"></app-child>

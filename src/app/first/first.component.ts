@@ -9,5 +9,10 @@ export class FirstComponent {
   section: string = '2-GL 2023';
   university = 'tek-up';
   hd = false;
-  color = 'red';
+  color = 'pink';
+
+  traitement() {
+    // alert("J'ai été cliqué");
+    this.university = 'Sésame';
+  }
 }
