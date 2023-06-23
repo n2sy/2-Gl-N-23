@@ -1,0 +1,25 @@
+
+
+<div [ngStyle]="{
+    'backgroundColor' : bg,
+    'color' : cl,
+    'fontSize' : size,
+    'fontFamily' : font
+}">Exercice d'application</div>
+
+Background Color
+<input [(ngModel)]="bg" type="text" class="form-control">
+Text Color
+<input [(ngModel)]="cl" type="text" class="form-control">
+Font Size
+<input #sz (keyup)="changeSize()" type="number" class="form-control">
+<!-- V2 -->
+<!-- <input #sz (keyup)="changeSize(sz)" type="number" class="form-control"> -->
+
+<hr>
+ {{ sz.value }}
+<hr>
+Police
+<select [(ngModel)]="font" class="form-control">
+    <option *ngFor="let font of tabFonts" [value]="font">{{ font }} </option>
+</select>
