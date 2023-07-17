@@ -1,6 +1,6 @@
-<li (click)="sendCandToListe()" class="list-group-item">
+<li appCustomDir (click)="sendCandToListe()" class="list-group-item">
 <img  src="../../assets/{{oneCandidat.avatar}}">
-{{ oneCandidat.prenom }}
-{{ oneCandidat.nom }}
+{{ oneCandidat.prenom | titlecase }}
+{{ oneCandidat.nom | uppercase }}
    
 </li>

@@ -1,0 +1,45 @@
+
+
+
+<form #f="ngForm">
+    <label for="">Gestion d'erreurs</label>
+    <input #err="ngModel" ngModel name="gestion" type="text" required minlength="5" pattern="nidhal" class="form-control">
+    <div *ngIf="err.invalid && err.touched" class="alert alert-danger">
+        <p *ngIf="err.errors['required']">Ce champ est obligatoire</p>
+        <p *ngIf="err.errors['minlength']">Le nbre minimal de caractères est 5</p>
+        <p *ngIf="err.errors['pattern']">Le pattern est "nidhal"</p>
+    </div>
+    <label for="log">Login</label>
+    <input #loginInp="ngModel" type="text" class="form-control" required email ngModel name="login" id="log">
+    
+    <div *ngIf="loginInp.invalid && loginInp.dirty" class="alert alert-danger">Veuillez saisir une adresse mail valide</div>
+
+    <label for="">Mot de passe</label>
+    <input type="text" ngModel name="password" class="form-control">
+
+    <label for="">Section</label>
+    <select [ngModel]="defautlSection" ngModel name="section" class="form-control">
+        <option value=""></option>
+        <option value="GL">GL</option>
+        <option value="DMWM">DMWM</option>
+        <option value="DSEN">DSEN</option>
+    </select>
+    <hr>
+    {{ defautlSection }}
+    <hr>
+    <br>
+
+    <label for="">Commentaire</label>
+    <textarea [(ngModel)]="myComment" name="commentaire" class="form-control" cols="4" rows="5"></textarea>
+
+    <hr>
+    {{ myComment}}
+
+    <br>
+    <button (click)="onSubmit(f)" type="submit" class="btn btn-success">Connect</button>
+
+
+    <pre>
+        {{ f.value | json}}
+    </pre>
+</form>

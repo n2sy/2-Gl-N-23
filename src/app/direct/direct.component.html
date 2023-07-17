@@ -9,3 +9,13 @@
 </div>
 
 <button (click)="changeColor()">Change Color</button>
+
+<div [ngClass]="{
+    c1 : class1,
+    c2 : class2,
+    c3 : class3
+}">
+    Exemple de NgClass 
+</div>
+
+<button (click)="switchClass()">Switch Class</button>
